@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-POP Universe | 위키백과 가이드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        kpop: { blue: '#00d2ff', purple: '#9d50bb', dark: '#020617' }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 
+                0 8px 32px 0 rgba(31, 38, 135, 0.1),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+            border-radius: 2.5rem;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #0082ad, #3a7bd5, #9d50bb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .mesh-bg {
+            background-color: #f8fafc;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(0, 210, 255, 0.15) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, rgba(157, 80, 187, 0.15) 0, transparent 50%), 
+                radial-gradient(at 100% 100%, rgba(255, 0, 122, 0.1) 0, transparent 50%), 
+                radial-gradient(at 0% 100%, rgba(0, 229, 255, 0.1) 0, transparent 50%);
+        }
+    </style>
+</head>
+<body class="mesh-bg text-slate-800 font-sans selection:bg-kpop-blue selection:text-white overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="hero.png" alt="K-POP Concert" class="w-full h-full object-cover opacity-50 scale-105">
+            <div class="absolute inset-0 bg-gradient-to-b from-white/40 via-white/80 to-[#f8fafc]"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6 max-w-5xl animate-float">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" alt="South Korea Flag" class="w-20 mx-auto mb-8 shadow-2xl rounded-lg border border-white/50">
+            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tighter text-gradient leading-tight">
+                K-POP<br>UNIVERSE
+            </h1>
+            <p class="text-lg md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto leading-relaxed">
+                대한민국을 넘어 전 세계 음악 시장의 주류가 된<br class="hidden md:block">
+                K-POP의 정의와 역사, 그리고 독보적인 시스템을 소개합니다.
+            </p>
+            <div class="mt-10">
+                <a href="#definition" class="px-8 py-4 bg-gradient-to-r from-kpop-blue to-kpop-purple rounded-full font-bold text-white shadow-xl shadow-kpop-blue/30 hover:shadow-kpop-blue/50 transition-all hover:scale-105 inline-block">
+                    콘텐츠 보기
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-kpop-blue/20 rounded-full blur-[100px] animate-pulse-slow"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-kpop-purple/20 rounded-full blur-[100px] animate-pulse-slow"></div>
+    </header>
+
+    <main class="relative z-10">
+        <!-- Definition Section -->
+        <section id="definition" class="py-32 px-6 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-gradient">K-POP의 정의</h2>
+                    <p class="text-xl text-slate-600 leading-relaxed mb-6 font-medium">
+                        K-pop은 대한민국의 대중음악을 의미하며, 특히 **아이돌 그룹**과 그들의 **댄스 음악**을 중심으로 하는 장르를 지칭합니다. 
+                    </p>
+                    <p class="text-lg text-slate-500 leading-relaxed">
+                        일렉트로닉 댄스, 랩, R&B 등 다양한 현대 음악 장르가 한국 특유의 감성과 결합된 독창적인 형태를 띠고 있으며, 단순한 음악을 넘어 글로벌 문화 현상으로 자리 잡았습니다.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="glass p-6 text-center">
+                        <span class="block text-3xl font-black text-kpop-blue mb-2">Dance</span>
+                        <p class="text-sm text-slate-500">정교한 안무</p>
+                    </div>
+                    <div class="glass p-6 text-center">
+                        <span class="block text-3xl font-black text-kpop-purple mb-2">Idol</span>
+                        <p class="text-sm text-slate-500">아이돌 중심</p>
+                    </div>
+                    <div class="glass p-6 text-center">
+                        <span class="block text-3xl font-black text-pink-500 mb-2">Global</span>
+                        <p class="text-sm text-slate-500">전세계적 열풍</p>
+                    </div>
+                    <div class="glass p-6 text-center">
+                        <span class="block text-3xl font-black text-amber-500 mb-2">Visual</span>
+                        <p class="text-sm text-slate-500">압도적 영상미</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Characteristics Section -->
+        <section class="py-32 px-6 bg-white/30">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gradient">핵심 특징</h2>
+                    <p class="text-slate-500 text-lg font-medium">K-POP을 특별하게 만드는 4가지 요소</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="glass p-10 group hover:bg-white/70 transition-all duration-500">
+                        <h3 class="text-2xl font-black mb-4 text-slate-900">국제적 사운드</h3>
+                        <p class="text-slate-600">서구권의 팝 사운드와 아시아 특유의 퍼포먼스가 결합된 하이브리드 음악.</p>
+                    </div>
+                    <div class="glass p-10 group hover:bg-white/70 transition-all duration-500">
+                        <h3 class="text-2xl font-black mb-4 text-slate-900">칼군무</h3>
+                        <p class="text-slate-600">수만 번의 연습으로 완성된 정교한 단체 댄스와 포인트 안무.</p>
+                    </div>
+                    <div class="glass p-10 group hover:bg-white/70 transition-all duration-500">
+                        <h3 class="text-2xl font-black mb-4 text-slate-900">비주얼 임팩트</h3>
+                        <p class="text-slate-600">최첨단 기술이 반영된 뮤직비디오와 트렌디한 패션 스타일링.</p>
+                    </div>
+                    <div class="glass p-10 group hover:bg-white/70 transition-all duration-500">
+                        <h3 class="text-2xl font-black mb-4 text-slate-900">팬덤 응집력</h3>
+                        <p class="text-slate-600">SNS를 기반으로 아티스트와 강력하게 유대하는 글로벌 팬덤 문화.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Training System -->
+        <section class="py-32 px-6 max-w-7xl mx-auto">
+            <div class="glass p-12 md:p-20 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-kpop-blue/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-full md:w-1/3">
+                        <h2 class="text-4xl font-black mb-4 text-slate-900">트레이닝 시스템</h2>
+                        <p class="text-slate-500 font-medium">연습생부터 데뷔까지</p>
+                    </div>
+                    <div class="w-full md:w-2/3 space-y-8">
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-kpop-blue rounded-full flex items-center justify-center text-white font-bold">01</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">체계적인 발굴</h4>
+                                <p class="text-slate-600">오디션을 통해 원석을 발굴하고 기획사만의 노하우로 육성합니다.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-kpop-purple rounded-full flex items-center justify-center text-white font-bold">02</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">전문 교육 시스템</h4>
+                                <p class="text-slate-600">수년간 보컬, 안무는 물론 외국어와 인성 교육까지 철저히 진행됩니다.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="flex-shrink-0 w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold">03</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">완성형 아티스트</h4>
+                                <p class="text-slate-600">실력과 스타성을 완벽히 갖춘 상태로 대중 앞에 데뷔하게 됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Influence -->
+        <section class="py-32 px-6 bg-slate-900 text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-20">
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-4">글로벌 영향력</h2>
+                    <p class="text-slate-400 text-lg">빌보드에서 코첼라까지, 세계를 흔들다</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="border-l-4 border-kpop-blue pl-8">
+                        <h3 class="text-2xl font-bold mb-4">기록적인 성과</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            원더걸스의 빌보드 첫 진입을 시작으로, 싸이의 '강남스타일' 열풍, 그리고 BTS와 블랙핑크의 전무후무한 빌보드 및 글로벌 차트 석권이 이어졌습니다.
+                        </p>
+                    </div>
+                    <div class="border-l-4 border-kpop-purple pl-8">
+                        <h3 class="text-2xl font-bold mb-4">문화적 파급력</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            음악을 넘어 패션, 뷰티, 한국어 학습 등 전 세계 젊은 층의 라이프스타일 전반에 걸쳐 지대한 영향을 미치고 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-16 bg-white text-center border-t border-slate-200">
+        <p class="text-slate-400 font-medium">&copy; 2026 K-POP UNIVERSE. Data based on Wikipedia.</p>
+    </footer>
+
+    <script>
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        };
+        const revealObserver = new IntersectionObserver(revealCallback, { threshold: 0.1 });
+        document.querySelectorAll('.glass').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(30px)";
+            el.style.transition = "all 0.8s cubic-bezier(0.22, 1, 0.36, 1)";
+            revealObserver.observe(el);
+        });
+    </script>
+</body>
+</html>
